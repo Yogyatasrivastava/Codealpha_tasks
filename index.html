@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="player">
+            <!-- Album Art -->
+            <div class="album-art">
+                <img id="albumArt" src="https://via.placeholder.com/200?text=No+Song" alt="Album Art">
+            </div>
+
+            <!-- Song Information -->
+            <div class="song-info">
+                <h2 id="songTitle">No Song</h2>
+                <p id="artistName">Unknown Artist</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <span id="currentTime">0:00</span>
+                <input type="range" id="progressBar" min="0" max="100" value="0">
+                <span id="duration">0:00</span>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button id="prevBtn" class="btn" title="Previous">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button id="playBtn" class="btn play-btn" title="Play">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="nextBtn" class="btn" title="Next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+
+            <!-- Volume Control -->
+            <div class="volume-container">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="volumeControl" min="0" max="100" value="70" title="Volume">
+                <i class="fas fa-volume-up"></i>
+            </div>
+
+            <!-- Autoplay Toggle -->
+            <div class="autoplay-container">
+                <label for="autoplayToggle">
+                    <input type="checkbox" id="autoplayToggle" checked>
+                    <span>Autoplay</span>
+                </label>
+            </div>
+
+            <!-- Playlist -->
+            <div class="playlist-container">
+                <h3>Playlist</h3>
+                <ul id="playlist" class="playlist">
+                    <!-- Playlist items will be added here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="audioPlayer"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
